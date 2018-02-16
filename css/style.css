@@ -37,6 +37,7 @@ img {
  /* margin-left: auto;
   margin-right: auto;
  */
+  height: 120px;
   margin: 5% auto 60px; 
   position: relative;
 }
@@ -98,5 +99,7 @@ player-input:hover{
   background-color: white;
 }
 
-
+#hintBar {
+  display: none;
+}
 
