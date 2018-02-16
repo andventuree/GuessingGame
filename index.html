@@ -2,58 +2,62 @@
 <html lang="en">
   <head>
     <title>Guessing Game</title>
-
-    <!-- Bootstrap and CSS here-->
-    <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
 
   </head>
   <body>
 
-      <div id='app' class='container center'>
+      <div class='center container' id='app'>
 
         <div id='headers'>
-          <h1 id='title'>Play the Guessing Game!</h1>
-          <h3 id='subtitle'>Guess a number between 1-100!</h3>
+          <!-- Title and subtitles! -->
+          <h1>Guessing Game</h1>
+          <h3>Guess a number between 1-100</h2>
         </div>
 
         <div id='main'>
           <div id='input-parent'>
-            <input id='player-input' class='center' placeholder="#" maxlength='3' autofocus=autofocus></input>
-            <button class='btn btn-success' id='submit'>Go!</button>
+            <!-- Player's guess input, and submit button -->
+            <input id='player-input' class='center' placeholder='#' maxlength='3'></input>
+            <button class='btn btn-success' id='submit'>Submit</button>
           </div>
 
-          <div id='guesses'>
-            <ul id='guess-list'>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
+          <div class='' id='guesses'>
+            <!-- unordered list of guesses -->
+            <ul  id='guess-list'>
+              <li class='guess '>-</li>
+              <li class='guess '>-</li>
+              <li class='guess '>-</li>
+              <li class='guess '>-</li>
+              <li class='guess '>-</li>
             </ul>
+          
           </div>
 
           <div id="menu-btns">
-            <button class='btn btn-large center' id='reset'>Reset</button>
-            <button class='btn btn-large center' id='hint'>Hint</button>
+            <!-- reset and hint buttons -->
+            <button type='button' class='btn btn-primary center' id='reset'>reset</button>
+            <button type='button' class='btn btn-danger center' id='hint'>hint</button>
+
           </div>
         </div>
       </div>
 
 
 
-    <div id='footer' class='center'>
+    <div class='center' id='footer'>
         <div class='row'>
           <div class='col-sm-4'>
-            <img src='img/fa-logo@2x.png'></img>
+            <img src='fa-logo@2x_preview.png'></img>
+          </div>
+
+          <div class='col-sm-4' id='owner'>
+            <h4>Project by AndrewW</h4>
           </div>
 
           <div class='col-sm-4'>
-            <h4>Project by YOUR NAME HERE</h4>
-          </div>
-
-          <div class='col-sm-4'>
-            <img src='img/grace_hopper_academy.png'></img>
+            <img src='grace_hopper_academy_preview.png'></img>
           </div>
 
 
