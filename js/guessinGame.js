@@ -40,6 +40,7 @@ function endGameMessages(){
 	$('#player-input').prop('disabled', true); //so no more input is accepted
 	$('#player-input').attr('placeholder', "^ o ^");
 	$('#subtitle').text("Click the reset button to play again!!");
+	$('#reset').focus();
 };
 
 Game.prototype.checkGuess = function(){
@@ -137,7 +138,7 @@ function resetGame(){
 $(document).ready(function(){
 	var game = new Game(); //starting the first game when page loads
 	var hintGiven = false;
-	$('#player-input').select();
+	$('#player-input').select(); // Will start cursor on input element
 	$('#submit').on('click', function(e){
 		guessProcess(game); //after submitted guess, calculations start	
 		console.log(game.pastGuesses);
@@ -150,7 +151,6 @@ $(document).ready(function(){
 		}
 	});
 	
-
 	$('#hint').on('click', function(){
 		if(hintGiven === false){
 			hintGiven = true;
@@ -162,10 +162,12 @@ $(document).ready(function(){
 	});
 
 	$('#reset').on('click', function(){	
+		
 		game = newGame(); //resets the game global variable above	
 		//cannot put this line into resetGame() because ???
 		//issue: a new instance will be created BUT, that game doesnt get carried thru to the other listeners
 		resetGame(); 
+		$('#player-input').focus(); // Will start cursor on input element
 		//hide hints
 		hintGiven = false; //same issue with game = newGame();
 		$('#hintBar').slideUp();
