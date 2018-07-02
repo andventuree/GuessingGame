@@ -48,7 +48,7 @@ Game.prototype.checkGuess = function(){
 		// $('#title').text("You Win!"); //will be done by guessProcess func below
 		endGameMessages();
 		// this.pastGuesses.push(this.playersGuess); //just cause you win doesn't mean you shouldnt store the number!
-		// $('#guess-list li:nth-child('+ this.pastGuesses.length +')').text(this.playersGuess); //what is this line???
+		// $('#guess-list li:nth-child('+ this.pastGuesses.length +')').text(this.playersGuess); //push guess to available box
 		return "You Win!";
 	} 
 	else {//&& this.pastGuesses.length <= 5
@@ -57,7 +57,7 @@ Game.prototype.checkGuess = function(){
 			return "You have already guessed that number.";
 		} else {
 			this.pastGuesses.push(this.playersGuess);
-			$('#guess-list li:nth-child('+ this.pastGuesses.length +')').text(this.playersGuess); //what is this line???
+			$('#guess-list li:nth-child('+ this.pastGuesses.length +')').text(this.playersGuess); //push guess to available box
 			
 			if(this.pastGuesses.length === 5){		
 			//technically, you shouldnt be able to guess if you've already hit 5 guesses before this attempt;
@@ -154,7 +154,7 @@ $(document).ready(function(){
 	$('#hint').on('click', function(){
 		if(hintGiven === false){
 			hintGiven = true;
-			var hint = game.provideHint(); //this resets game every time?
+			var hint = game.provideHint(); 
 			$('#hintBar').slideDown();
 			$('#hintBar').text('The right number is either ' + hint[0] + ", " + hint[1] + ", or " + hint[2] + ".");	
 		} 
@@ -164,7 +164,7 @@ $(document).ready(function(){
 	$('#reset').on('click', function(){	
 		
 		game = newGame(); //resets the game global variable above	
-		//cannot put this line into resetGame() because ???
+		//cannot put this line into resetGame()
 		//issue: a new instance will be created BUT, that game doesnt get carried thru to the other listeners
 		resetGame(); 
 		$('#player-input').focus(); // Will start cursor on input element

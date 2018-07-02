@@ -11,6 +11,36 @@ body {
   margin: 0 auto;
 }
 
+#footer {
+  width: 100%;
+  height: 50px;
+  border-top: solid 2px black;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  opacity: .8;
+}
+
+#owner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footerImg {
+  display: inline;
+  width: 200px;
+  height: 50px;
+}
+
+#github {
+  height: 30px;
+  width: 50px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/*Application characteristics*/
+
 #app {
   padding: 100px;
   border: 2px black solid;
@@ -20,16 +50,13 @@ body {
   margin: 50px auto;
 }
 
-
 ul {
   list-style: none;
   padding: 0;
 }
 
-img {
-  display: inline;
-  width: 200px;
-  height: 50px;
+#hintBar {
+  display: none;
 }
 
 #input-parent {
@@ -38,7 +65,7 @@ img {
   margin-right: auto;
  */
   height: 120px;
-  margin: 5% auto 60px; 
+  margin: 5% auto 60px;
   position: relative;
 }
 
@@ -51,44 +78,22 @@ img {
   outline: none;
 }
 
-player-input:hover{
-
-}
-
 #submit {
 /*  position: relative; if you decide not to use the input-parent element
   bottom: 65px;
   left: 65px;*/
-
   position: absolute;
   top: 95px;
   left: 95px;
-
-
   border-radius: 50%;
   width: 70px;
   height: 70px;
   font-size: .9em;
 }
 
-#footer {
-  width: 100%;
-  height: 50px;
-  border-top: solid 2px black;
-  background-color: white;
-  position: fixed;
-  bottom: 0;
-  opacity: .8; 
-}
-
-#owner {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .guess {
   display: inline;
-  /*width: 50px;  
+  /*width: 50px;
   height: 50px;*/ /*Does not work because of inline elem*/
   border: 2px solid gray;
   border-radius: 10%;
@@ -99,7 +104,5 @@ player-input:hover{
   background-color: white;
 }
 
-#hintBar {
-  display: none;
-}
+
 
